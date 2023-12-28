@@ -11,12 +11,14 @@ fn main() {
 
 fn solve_first() {
     let races = get_races();
+
     let sum: u64 = races
         .iter()
         .map(|race| race.calc_winning_ways())
         .collect::<Vec<u64>>()
         .iter()
         .fold(1, |acc, cur| acc * cur);
+
     println!("Part 1: {}", sum);
 }
 
